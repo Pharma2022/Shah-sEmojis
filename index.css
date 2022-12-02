@@ -1,0 +1,139 @@
+*,*::before,*::after{box-sizing: border-box;}
+
+
+html {  height: 100vh;
+        font-family: Baloo;}
+
+body { background-image: linear-gradient(#5DA4D9, #FFF);}
+
+html,body{  margin: 0;
+            padding: 0;}
+            
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 40em;}
+
+#emoji-container {
+    margin: 2.5em auto;
+    text-align: center;
+    max-width:20em;}
+
+#emoji-container span {
+    margin: 10px;
+    font-size: 60px;}
+
+#push-btn, #unshift-btn {
+    background-color: #80D87F;}
+
+#shift-btn,#pop-btn {
+    background-color: #E23349;}
+
+h1 { letter-spacing: 0.125em ;
+    text-align: center;
+    color: white;}
+
+input {
+    margin: 0 auto;
+    display: block;
+    border: none;
+    height: 1.875em;
+    background: white;
+    border-radius: 6px;
+    text-align: center;}
+
+button {
+    justify-content: center;
+    font-family: Baloo;
+    background: darkcyan;
+    color: white;
+    border: none;
+    height: 3em;
+    width: 3em;
+    border-radius: 12em;
+    margin: 0 auto;}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0.625em 0 0;}
+
+
+/* nav */
+
+
+.nav{   
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto auto 1em ;
+    padding: 0;
+    
+    }
+    
+  
+    
+    @media (max-width:40em){
+.mt0{
+    margin-top: 0em;
+    
+    
+}   
+
+    .nav{
+        display: none;
+    }
+    .container{
+        max-width: fit-content;
+    }
+    header{
+        text-align: justify;
+    }
+
+}
+    
+.btn{
+   margin-left: 1em;
+}
+
+#btn{ width: 50%;}
+#btn:hover,#btn:focus{
+        cursor: pointer;}
+
+li{ list-style: none;
+    margin-top:1em;}
+    
+a{text-decoration: none;
+    color: whitesmoke;}
+a:hover,a:focus,{
+    text-decoration: underline;
+    cursor: pointer;}
+    
+@media(min-width: 40em){
+    header{
+    display: flex;
+    flex-direction: column;
+    
+    margin:  auto;
+    text-align: left;
+   justify-content: space-evenly;}
+    
+   
+.btn{
+    display: none;}
+    nav{
+     margin: 0 auto;   
+    }
+.nav{
+   
+  
+    flex-direction: row;
+    justify-content: center;
+  
+    
+}
+li{
+    margin:  2em 2em 0em 0em ;
+}
+}
+
