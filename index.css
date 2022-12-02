@@ -1,19 +1,30 @@
 *,*::before,*::after{box-sizing: border-box;}
 
 
-html {  height: 100vh;
-        font-family: Baloo;}
 
-body { background-image: linear-gradient(#5DA4D9, #FFF);}
 
-html,body{  margin: 0;
+
+html,body{   font-family: Baloo;
+ margin: 0;
             padding: 0;}
-            
+    
+    
+body { background-image: linear-gradient(#5DA4D9, #FFF);
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-content: flex-start;
+border: 10px solid grey;
+height:100vh;
+}            
 .container{
+    flex:1;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    max-width: 40em;}
+    margin:auto;
+    min-width: 30em;
+    border: 5px solid red
+    }
 
 #emoji-container {
     margin: 2.5em auto;
@@ -21,8 +32,8 @@ html,body{  margin: 0;
     max-width:20em;}
 
 #emoji-container span {
-    margin: 10px;
-    font-size: 60px;}
+    margin: 0.625rem;
+    font-size: 3.75rem;}
 
 #push-btn, #unshift-btn {
     background-color: #80D87F;}
@@ -128,7 +139,7 @@ a:hover,a:focus,{
    
   
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
   
     
 }
@@ -136,4 +147,3 @@ li{
     margin:  2em 2em 0em 0em ;
 }
 }
-
