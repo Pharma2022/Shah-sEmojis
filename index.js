@@ -1,5 +1,5 @@
 const myEmojis = ["👨‍💻", "⛷", "🍲"]
-const emojiInput = document.getElementById("emoji-input")
+ 
 
 function renderEmojis() {
     document.getElementById("emoji-container").innerHTML = ""
@@ -8,33 +8,24 @@ function renderEmojis() {
         const emoji = document.createElement('span')
         emoji.textContent=myEmoji
         document.getElementById("emoji-container").append(emoji)}
+      
+      document.getElementById("emoji-input").value = ""
+     
       }
       
 renderEmojis()
 
-function pushUnshift(){
-        emojiInput.value = ""
-        renderEmojis()  }
-
-document.getElementById("pop-btn").addEventListener("click", function() {
-    myEmojis.pop()
-    renderEmojis()  })
-
-document.getElementById("shift-btn").addEventListener("click", function() {
-    myEmojis.shift()
-    renderEmojis()  })
-
-document.getElementById("unshift-btn").addEventListener("click", function(){
-    if (emojiInput.value) {
-        myEmojis.unshift(emojiInput.value)
-        pushUnshift()  }
+document.addEventListener("click", e =>{
+    e.preventDefault()
+    e.target.id ==="pop-btn"? myEmojis.pop():
+    e.target.id ==="shift-btn"? myEmojis.shift():
+    e.target.id ==="push-btn" ? myEmojis.push (  document.getElementById("emoji-input").value):
+    e.target.id ==="unshift-btn" ? myEmojis.unshift(  document.getElementById("emoji-input").value):""
+    e.target.id === "pop-btn"||"shift-btn"||"push-btn"||"unshift-btn"? renderEmojis():""
+    
+    
 })
 
- document.getElementById("push-btn").addEventListener("click", function(){
-    if (emojiInput.value) {
-        myEmojis.push(emojiInput.value)
-       pushUnshift()    }
-})
 document.getElementById("btn").addEventListener("click",function gfgMenu() 
             {const nav = document.querySelector('.nav');
   
@@ -42,4 +33,4 @@ document.getElementById("btn").addEventListener("click",function gfgMenu()
             {nav.style.display = "block";}
             else {nav.style.display = "none";}
               }
-        )
+        )// javascript
